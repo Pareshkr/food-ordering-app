@@ -5,7 +5,7 @@ import products from "@/assets/data/products";
 
 const product = products[1];
 
-export default function TabOneScreen() {
+const ProductListItem = () => {
   return (
     <View style={styles.container}>
       <Image source={{ uri: product.image }} style={styles.image} />
@@ -13,6 +13,12 @@ export default function TabOneScreen() {
       <Text style={styles.price}>${product.price}</Text>
     </View>
   );
+};
+
+export default function TabOneScreen() {
+  return <View>
+    <ProductListItem />
+  </View>;
 }
 
 const styles = StyleSheet.create({
